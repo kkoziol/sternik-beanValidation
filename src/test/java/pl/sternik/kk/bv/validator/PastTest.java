@@ -54,10 +54,10 @@ public class PastTest {
         Set<ConstraintViolation<BeanWithPast>> violations;
 
         SUT.setDateTime(LocalDateTime.now());
-        //System.out.println("Depends on speed....!");
-//        Thread.sleep(10);
+//        System.out.println("Depends on speed....!");
+//        Thread.sleep(30);
         violations = validateClass(SUT);
-        assertEquals(1, violations.size());
+        assertEquals(0, violations.size());
         System.out.println("Now!");
         for (ConstraintViolation<BeanWithPast> constraintViolation : violations) {
             System.out.println(constraintViolation.getMessage());
@@ -65,7 +65,7 @@ public class PastTest {
 
         SUT.setDateTime(LocalDateTime.now());
         violations = validateClass(SUT);
-        assertEquals(1, violations.size());
+        assertEquals(0, violations.size());
     }
 
     @Test
