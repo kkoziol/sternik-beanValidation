@@ -35,7 +35,7 @@ public class AdressTest {
             System.out.println(constraintViolation.getMessage());
         }
 
-        assertEquals(0, violations.size());
+        assertEquals(1, violations.size());
     }
 
     @Test
@@ -46,7 +46,7 @@ public class AdressTest {
             System.out.println(constraintViolation.getMessage());
         }
 
-        assertEquals(0, violations.size());
+        assertEquals(1, violations.size());
     }
 
     @Test
@@ -58,7 +58,7 @@ public class AdressTest {
         }
 
 
-        assertEquals(0, violations.size());
+        assertEquals(1, violations.size());
     }
     @Test
     public void thatOnlyGroups() {
@@ -69,7 +69,7 @@ public class AdressTest {
         }
 
 
-        assertEquals(0, violations.size());
+        assertEquals(1, violations.size());
     }
 
     @Test
@@ -81,7 +81,7 @@ public class AdressTest {
         }
 
 
-        assertEquals(0, violations.size());
+        assertEquals(1, violations.size());
     }
     @Test
     public void thatDefaultWithSomeData() {
@@ -93,7 +93,7 @@ public class AdressTest {
         }
 
 
-        assertEquals(0, violations.size());
+        assertEquals(1, violations.size());
     }
     private Set<ConstraintViolation<Address>> validateClass(Address myClass) {
         ValidatorFactory factory = Validation.buildDefaultValidatorFactory();
